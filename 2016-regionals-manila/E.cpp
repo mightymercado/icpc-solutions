@@ -1,6 +1,18 @@
 // Tested using https://www.acmicpc.net/problem/15385
 // because icpclivearchive does not work...
 
+// The main idea is that regardless of X, you can
+// build an expression that results to Y in 28 steps.
+// The editorial summarizes that you can do it recursively,
+// with addition, multiplication and substraction.
+// The base case is to build Y using (X + X + ... (y times)) / X
+
+// The key step to the AC solution is cancelling out
+// common divisions. Without this, I was getting
+// 30+ operations. 
+
+// Hint: https://math.stackexchange.com/questions/3591002/shortest-way-to-write-787-in-an-arithmetic-expression
+
 #include <stdio.h>
 #include <string>
 #include <unistd.h>
